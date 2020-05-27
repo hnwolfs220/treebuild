@@ -2,6 +2,7 @@
 构建树结构，springboot2整合mybatis、mysql和FastJson
 
 1、数据库
+
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -34,11 +35,12 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 2、springboot2整合FastJson
 (1)添加依赖
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.15</version>
-		</dependency>
+	<dependency>
+		<groupId>com.alibaba</groupId>
+		<artifactId>fastjson</artifactId>
+		<version>1.2.15</version>
+	</dependency>
+	
 (2)设置FastJson处理数据替换Spingboot默认的Jackson
 @Configuration
 public class WebMvcConf extends WebMvcConfigurerAdapter {
@@ -77,6 +79,7 @@ public class WebMvcConf extends WebMvcConfigurerAdapter {
         converters.add(fastConverter);
     }
  }
+
  
  3、项目参考（后续补充）
 树状构建参考： https://blog.csdn.net/qq_38164123/article/details/94358131
